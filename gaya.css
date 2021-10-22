@@ -1,0 +1,11 @@
+.center {
+    margin:auto;
+    width:50%;
+    text-align:center;
+    padding:270px 0;
+}
+
+.paddington {
+    border:2px solid black;
+    padding:0px;
+}
