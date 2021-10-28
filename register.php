@@ -3,7 +3,7 @@ require_once("config.php");
 
 if(isset($_POST['register'])){
     $user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $sql = "INSERT INTO pengguna (user, password) 
     VALUES (:user, :password)";
     $stmt = $db->prepare($sql);

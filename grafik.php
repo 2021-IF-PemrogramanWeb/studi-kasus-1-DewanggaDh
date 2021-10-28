@@ -1,4 +1,4 @@
-<?php require_once("auth.php");?>
+<?php require_once("auth.php"); ?>
 
 <!doctype html>
 <html lang="en">
@@ -60,7 +60,8 @@
         <form class="text-right">
             <a href="tabling.php" class="text-rigth btn btn-secondary btn-sm mb-3" role="button" aria-disabled="true">TABLE</a>
             <br>
-            <a href="logout.php"><button class="text-rigth btn btn-secondary btn-sm mt-3" role="button" aria-disabled="true">LOGOUT</button></a>
+            <!-- <a href="logout.php"><button class="text-rigth btn btn-secondary btn-sm mt-3" role="button" aria-disabled="true">LOGOUT</button></a> -->
+            <a href="logout.php" class="btn btn-sm btn-secondary" role="button" aria-disabled="true">LOGOUT</a>
             <br>
 <p class="mt-5 mr-3">
             <script> document.write(new Date().getDate() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getFullYear()); </script>

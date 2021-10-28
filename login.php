@@ -7,7 +7,7 @@ if(isset($_POST['login'])){
     $sql = "SELECT * from pengguna where user=:user";
     $stmt = $db->prepare($sql);
 
-    $aparms = array(
+    $params = array(
         ":user" => $user
     );
 
@@ -38,13 +38,13 @@ if(isset($_POST['login'])){
   </head>
   <body>
       <div class="text-center mt-5 border border-dark">
-        <form style="max-width:240px;margin:auto;">
+        <form style="max-width:240px;margin:auto;" action="" method="POST">
           <img class="mt-5 mb-3" src="logo.jpg" height="200" alt="Logo Self-Made">
           <h1 class="h3 mb-3 font-weight-normal">PT Tali Sepatu</h1>
           <label for="user" class="sr-only">User</label>
           <input type="text" name="user" class="form-control"  required autofocus>
           <label for="password" class="sr-only mt-4">Password</label>
-          <input type="password" id="password"  class="form-control">
+          <input type="password" name="password"  class="form-control">
           <div class="mt-3 mb-3">
           <input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="LOGIN"/>
         </div>
