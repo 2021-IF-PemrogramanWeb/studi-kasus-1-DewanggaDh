@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Table</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+        <img class="text-left ml-2" src="logo.jpg" height="200" alt="Logo Self-Made">
+        <h1 class="text-center h1 mb-3 font-weight-normal">PT Tali Sepatu</h1>
+        <form class="text-right">
+        <a href="grafik.php" class="text-rigth btn btn-secondary btn-sm mb-3" role="button" aria-disabled="true">GRAPH</a>
+            <br>
+            <a href="logout.php"><button class="text-rigth btn btn-secondary btn-sm mt-3" role="button" aria-disabled="true">LOGOUT</button></a>
+            <br>
+<p class="mt-5 mr-3">
+            <script> document.write(new Date().getDate() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getFullYear()); </script>
+        </p>
+            
+        </form>
+        
+      </nav>
+
+      <div class="mt-3 mb-1 text-center">
+        <button class="btn btn-sm btn-primary" type="button">EXPORT TABLE</button>
+      </div>
+
+      <div class="table-responsive-sm text-center mt-3" style="max-width:800px;margin:auto;">
+        <table class="table  table-bordered" style="border-color:black">
+            <thead class="thead-light">
+                <tr style="background-color:aqua;">
+                  <th scope="col">No</th>
+                  <th scope="col">Tanggal Pembelian</th>
+                  <th scope="col">Nama Pelanggan</th>
+                  <th scope="col">Total Biaya Pembelian</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>15/09/2021</td>
+                  <td>Hartono Rachmawan</td>
+                  <td>Rp 599.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>20/09/2021</td>
+                    <td>Ari Hendra Ridwatan</td>
+                    <td>Rp 856.000,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>24/09/2021</td>
+                    <td>Ramli Jayawan</td>
+                    <td>Rp 715.000,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>29/09/2021</td>
+                    <td>Putri Dwi Gunawati</td>
+                    <td>Rp 745.000,00</td>
+                  </tr>
+                  <tr>
+                  <th scope="row">5</th>
+                  <td>02/10/2021</td>
+                  <td>Eko Purwodarminto</td>
+                  <td>Rp 835.000,00</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>09/10/2021</td>
+                  <td>Amira Panggabean</td>
+                  <td>Rp 421.000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>11/10/2021</td>
+                    <td>Putra Linggawan</td>
+                    <td>Rp 246.000,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>12/10/2021</td>
+                    <td>Laban Kian Samosir</td>
+                    <td>Rp 279.000,00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>28/10/2021</td>
+                    <td>Rachel Sinta Telaumbanua</td>
+                    <td>Rp 377.000,00</td>
+                  </tr>
+              </tbody>
+        </table>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
