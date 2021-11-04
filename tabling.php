@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,66 +38,41 @@
             <thead class="thead-light">
                 <tr style="background-color:aqua;">
                   <th scope="col">No</th>
-                  <th scope="col">Tanggal Pembelian</th>
-                  <th scope="col">Nama Pelanggan</th>
-                  <th scope="col">Total Biaya Pembelian</th>
+                  <th scope="col">On</th>
+                  <th scope="col">Off</th>
+                  <th scope="col">Ack By</th>
+                  <th scope="col">Reason</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>15/09/2021</td>
-                  <td>Hartono Rachmawan</td>
-                  <td>Rp 599.000,00</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>20/09/2021</td>
-                    <td>Ari Hendra Ridwatan</td>
-                    <td>Rp 856.000,00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>24/09/2021</td>
-                    <td>Ramli Jayawan</td>
-                    <td>Rp 715.000,00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>29/09/2021</td>
-                    <td>Putri Dwi Gunawati</td>
-                    <td>Rp 745.000,00</td>
-                  </tr>
-                  <tr>
-                  <th scope="row">5</th>
-                  <td>02/10/2021</td>
-                  <td>Eko Purwodarminto</td>
-                  <td>Rp 835.000,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>09/10/2021</td>
-                  <td>Amira Panggabean</td>
-                  <td>Rp 421.000,00</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>11/10/2021</td>
-                    <td>Putra Linggawan</td>
-                    <td>Rp 246.000,00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">8</th>
-                    <td>12/10/2021</td>
-                    <td>Laban Kian Samosir</td>
-                    <td>Rp 279.000,00</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">9</th>
-                    <td>28/10/2021</td>
-                    <td>Rachel Sinta Telaumbanua</td>
-                    <td>Rp 377.000,00</td>
-                  </tr>
+                  <?php
+                  $link = mysqli_connect("localhost", "id17847623_root", "DataDataData-2", "id17847623_tali_sepatu");
+                  if($link === false){
+                      die("Error, error di mana?" . mysqli_connect_error());
+                  }
+                  $sql = "select reason_table.No_ID, reason_table.On_Date, reason_table.Off_Date, reason_table.Ack_by, reason_list.Reason_name as Reason1 from reason_table join reason_list on reason_table.Reason=reason_list.No_Reason";
+                  if($result = mysqli_query($link, $sql)){
+                      if(mysqli_num_rows($result) > 0){
+                          while($row = mysqli_fetch_array($result)){
+                              echo "<tr>";
+                                echo "<td>" . $row['No_ID'] . "</td>";
+                                echo "<td>" . $row['On_Date'] . "</td>";
+                                echo "<td>" . $row['Off_Date'] . "</td>";
+                                echo "<td>" . $row['Ack_by'] . "</td>";
+                                echo "<td>" . $row['Reason1'] . "</td>";
+                              echo "</tr>";
+                          }
+                      }
+                      else {
+                          echo "Nggak ada meja";
+                      }
+                      }
+                      else {
+                       echo "Ada yang salah" . mysqli_error($link);
+                      }
+                      mysqli_close($link);
+                  ?>
+                
               </tbody>
         </table>
       </div>
