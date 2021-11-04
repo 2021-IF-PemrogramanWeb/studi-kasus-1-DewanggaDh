@@ -1,5 +1,22 @@
 <?php require_once("auth.php"); ?>
 
+<?php
+$con = mysqli_connect("localhost", "id17847623_root", "DataDataData-2", "id17847623_tali_sepatu");
+if(!$con){
+    echo "Ada masalah" . mysqli_error();
+} else {
+    $sql = "select Reason, count(DISTINCT(Reason)) as Total from reason_table group by Reason
+";
+    $result = mysqli_query($con, $sql);
+    $chart_data="";
+    while($row = mysqli_fetch_array($result)){
+        $reason_name[] = $row['Reason'];
+        $reason_count[] = $row['Total'];
+    }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -100,13 +117,12 @@
     const myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ["1", "2", "3", "4", "5", "6", "7", "8", 
-        "9", "10"],
+        labels: <?php echo json_encode($reason_name); ?>,
         datasets: [{
           backgroundColor: 'rgba(100, 100, 100, 10)',
           borderColor: 'rgb(256, 256, 256)',
-          data: [1, 6, 9, 34, 35, 37, 51, 54, 61, 76],
-          label: 'Banyak suara'
+          data: <?php echo json_encode($reason_count); ?>,
+          label: 'Banyak Reason'
         }]
       },
       options: {
